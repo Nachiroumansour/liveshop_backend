@@ -11,7 +11,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Installer les dépendances avec force pour pg
-RUN npm ci --only=production --unsafe-perm=true
+RUN npm install --only=production --unsafe-perm=true
 
 # Forcer la reconstruction de pg
 RUN npm rebuild pg
